@@ -10,12 +10,85 @@
       <h1>Mi blog personal</h1>
       <nav>
         <ul>
-            <li> <a href="#">Inicio</a></li>
-            <li> <a href="#"></a>Sobre mi</li>
-            <li> <a href="#"></a>Artículo</li>
-            <li> <a href="#"></a>Contacto</li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre mi</a></li>
+          <li><a href="#">Artículo</a></li>
+          <li><a href="#">Contacto</a></li>
         </ul>
       </nav>
     </header>
+    <main>
+      <section id="contacto">
+        <h2>Formulario de contacto</h2>
+        <p>Rellena el formúlario para enviarme tus comentarios o preguntas</p>
+        <form>
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Escribe tu nombre"
+            required
+          />
+
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="ejemplo@correo.com"
+            required
+          />
+
+          <label for="asunto">Asunto</label>
+          <select id="asunto" required>
+            <option>Consulta</option>
+            <option>Sugerencia</option>
+            <option>Queja</option>
+            <option>Otro</option>
+          </select>
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            rows="5"
+            placeholder="Escribe tu mensaje aquí..."
+            required
+          ></textarea>
+          <!-- Fieldset nos sirve para agrupar elementos de un formulario relacionado. -->
+          <fieldset>
+            <!-- Legend nos ayuda a asignarle un título a nuestro grupo de fieldset. -->
+            <legend>Género</legend>
+            <!-- Se les asigno el mismo name a la etiqueta input, esto para que solo deje seleccionar una de las opciones. -->
+            <label for="género-femenino">Masculino</label>
+            <input type="radio" name="género" id="género-femenino" />
+
+            <label for="género-masculino">Femenino</label>
+            <input type="radio" name="género" id="género-masculino" />
+
+            <label for="género-otro">Otro</label>
+            <input type="radio" name="género" id="género-otro" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Intereses</legend>
+            <label for="intereses-cocinar">Cocinar</label>
+            <input type="checkbox" name="Cocinar" id="intereses-cocinar" />
+
+            <label for="intereses-meditar">Meditar</label>
+            <input type="checkbox" name="Meditarr" id="intereses-meditar" />
+
+            <label for="intereses-senderismo">Senderismo</label>
+            <input
+              type="checkbox"
+              name="Senderismo"
+              id="intereses-senderismo"
+            />
+
+            <label for="intereses-escribir">Escribir</label>
+            <input type="checkbox" name="Escribir" id="intereses-escribir" />
+          </fieldset>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
