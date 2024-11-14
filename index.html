@@ -8,7 +8,10 @@
       name="Description"
       content="Página sobre drag, con información de las últimas temporadas de Drag Race y La Más Draga"
     />
-    <meta name="Keyword" content="drag, Drag Race, La Más Draga, reinas, ganadoras" />
+    <meta
+      name="Keyword"
+      content="drag, Drag Race, La Más Draga, reinas, ganadoras"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -18,18 +21,18 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #8294C4;
+        background-color: #8294c4;
         color: #333;
         margin: 0;
       }
       header {
-        background-color: #ACB1D6;
+        background-color: #acb1d6;
         padding: 10px;
         text-align: center;
       }
       h1 {
         font-size: 2.5em;
-        color: #DBDFEA;
+        color: #dbdfea;
       }
       nav ul {
         list-style-type: none;
@@ -40,7 +43,7 @@
         margin: 0 15px;
       }
       nav a {
-        color: #FFEAD2;
+        color: #ffead2;
         text-decoration: none;
         font-weight: bold;
       }
@@ -48,16 +51,16 @@
         padding: 20px;
       }
       section {
-        background-color: #ACB1D6;
+        background-color: #acb1d6;
         padding: 15px;
         border-radius: 8px;
         margin-bottom: 20px;
       }
       h2 {
-        color: #DBDFEA;
+        color: #dbdfea;
       }
       button {
-        background-color: #FFEAD2;
+        background-color: #ffead2;
         color: #333;
         border: none;
         padding: 10px 20px;
@@ -68,7 +71,7 @@
       footer {
         text-align: center;
         padding: 15px;
-        background-color: #ACB1D6;
+        background-color: #acb1d6;
         font-size: 0.9em;
         color: #333;
       }
@@ -79,17 +82,33 @@
       <h1>Drag Queens: ¡Reinas de la Pista!</h1>
       <nav>
         <ul>
-          <li><a href="#"><span class="material-icons">home</span>Inicio</a></li>
-          <li><a href="#"><span class="material-icons">emoji_events</span>Ganadoras</a></li>
-          <li><a href="#"><span class="material-icons">stars</span>Top Reinas</a></li>
-          <li><a href="#"><span class="material-icons">poll</span>Vota tu Favorita</a></li>
+          <li>
+            <a href="#"><span class="material-icons">home</span>Inicio</a>
+          </li>
+          <li>
+            <a href="#"
+              ><span class="material-icons">emoji_events</span>Ganadoras</a
+            >
+          </li>
+          <li>
+            <a href="#"><span class="material-icons">stars</span>Top Reinas</a>
+          </li>
+          <li>
+            <a href="#"
+              ><span class="material-icons">poll</span>Vota tu Favorita</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
     <main>
       <section>
         <h2>Últimas Temporadas</h2>
-        <p>¡Descubre quiénes se han llevado la corona en las temporadas más recientes de <strong>RuPaul's Drag Race</strong> y <strong>La Más Draga</strong>!</p>
+        <p>
+          ¡Descubre quiénes se han llevado la corona en las temporadas más
+          recientes de <strong>RuPaul's Drag Race</strong> y
+          <strong>La Más Draga</strong>!
+        </p>
         <ul>
           <li><strong>RuPaul's Drag Race Season 15:</strong> Sasha Colby</li>
           <li><strong>RuPaul's Drag Race All Stars 8:</strong> Jimbo</li>
@@ -100,13 +119,26 @@
 
       <section id="contacto">
         <h2>Vota por tu Reina Favorita</h2>
-        <p>Rellena el formulario para seleccionar a tu reina favorita y compartir tus comentarios.</p>
+        <p>
+          Rellena el formulario para seleccionar a tu reina favorita y compartir
+          tus comentarios.
+        </p>
         <form>
           <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" placeholder="Escribe tu nombre" required />
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Escribe tu nombre"
+            required
+          />
 
           <label for="email">Correo electrónico</label>
-          <input type="email" id="email" placeholder="ejemplo@correo.com" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="ejemplo@correo.com"
+            required
+          />
 
           <label for="favorita">Elige tu reina favorita</label>
           <select id="favorita" required>
@@ -118,7 +150,12 @@
           </select>
 
           <label for="mensaje">¿Por qué es tu favorita?</label>
-          <textarea id="mensaje" rows="5" placeholder="Cuéntanos por qué te encanta..." required></textarea>
+          <textarea
+            id="mensaje"
+            rows="5"
+            placeholder="Cuéntanos por qué te encanta..."
+            required
+          ></textarea>
 
           <fieldset>
             <legend>Género</legend>
@@ -135,14 +172,24 @@
             <label for="intereses-drag">Drag</label>
             <input type="checkbox" name="drag" id="intereses-drag" />
             <label for="intereses-maquillaje">Maquillaje</label>
-            <input type="checkbox" name="maquillaje" id="intereses-maquillaje" />
+            <input
+              type="checkbox"
+              name="maquillaje"
+              id="intereses-maquillaje"
+            />
             <label for="intereses-performances">Performances</label>
-            <input type="checkbox" name="performances" id="intereses-performances" />
+            <input
+              type="checkbox"
+              name="performances"
+              id="intereses-performances"
+            />
             <label for="intereses-cultura">Cultura Drag</label>
             <input type="checkbox" name="cultura" id="intereses-cultura" />
           </fieldset>
 
-          <button type="submit"><span class="material-icons">send</span>Enviar</button>
+          <button type="submit">
+            <span class="material-icons">send</span>Enviar
+          </button>
         </form>
       </section>
     </main>
