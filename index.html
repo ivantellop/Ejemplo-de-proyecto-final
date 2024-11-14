@@ -1,117 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Iván Tellez" />
     <meta
       name="Description"
-      content="Una página de mi proyecto final de html del bootcamp sobre etiquetas semánticas y estructura de una página web"
+      content="Página sobre drag, con información de las últimas temporadas de Drag Race y La Más Draga"
     />
-    <meta name="Keyword" content="HTML, etiquetas semánticas, proyecto" />
+    <meta name="Keyword" content="drag, Drag Race, La Más Draga, reinas, ganadoras" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="icon" href="./assets/cat.ico" type="image/x-icon" />
-    <title>Document</title>
+    <link rel="icon" href="./assets/drag.ico" type="image/x-icon" />
+    <title>Drag Queens: ¡Reinas de la Pista!</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #8294C4;
+        color: #333;
+        margin: 0;
+      }
+      header {
+        background-color: #ACB1D6;
+        padding: 10px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.5em;
+        color: #DBDFEA;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+      nav a {
+        color: #FFEAD2;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      main {
+        padding: 20px;
+      }
+      section {
+        background-color: #ACB1D6;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        color: #DBDFEA;
+      }
+      button {
+        background-color: #FFEAD2;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1em;
+        border-radius: 5px;
+      }
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #ACB1D6;
+        font-size: 0.9em;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Mi blog personal</h1>
+      <h1>Drag Queens: ¡Reinas de la Pista!</h1>
       <nav>
         <ul>
-          <li>
-            <a href="#"><span class="material-icons">home</span>Inicio</a>
-          </li>
-          <li>
-            <a href="#"><span class="material-icons">favorite</span>Sobre mi</a>
-          </li>
-          <li>
-            <a href="#"
-              ><span class="material-icons">bookmarks</span>Artículo</a
-            >
-          </li>
-          <li>
-            <a href="#">
-              <span class="material-icons">contact_page</span>Contacto</a
-            >
-          </li>
+          <li><a href="#"><span class="material-icons">home</span>Inicio</a></li>
+          <li><a href="#"><span class="material-icons">emoji_events</span>Ganadoras</a></li>
+          <li><a href="#"><span class="material-icons">stars</span>Top Reinas</a></li>
+          <li><a href="#"><span class="material-icons">poll</span>Vota tu Favorita</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <section>
+        <h2>Últimas Temporadas</h2>
+        <p>¡Descubre quiénes se han llevado la corona en las temporadas más recientes de <strong>RuPaul's Drag Race</strong> y <strong>La Más Draga</strong>!</p>
+        <ul>
+          <li><strong>RuPaul's Drag Race Season 15:</strong> Sasha Colby</li>
+          <li><strong>RuPaul's Drag Race All Stars 8:</strong> Jimbo</li>
+          <li><strong>La Más Draga 5:</strong> Fifi Estah</li>
+          <li><strong>Drag Race México Temporada 2:</strong> Leexa Fox</li>
+        </ul>
+      </section>
+
       <section id="contacto">
-        <h2>Formulario de contacto</h2>
-        <p>Rellena el formúlario para enviarme tus comentarios o preguntas</p>
+        <h2>Vota por tu Reina Favorita</h2>
+        <p>Rellena el formulario para seleccionar a tu reina favorita y compartir tus comentarios.</p>
         <form>
           <label for="nombre">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            placeholder="Escribe tu nombre"
-            required
-          />
+          <input type="text" id="nombre" placeholder="Escribe tu nombre" required />
 
           <label for="email">Correo electrónico</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="ejemplo@correo.com"
-            required
-          />
+          <input type="email" id="email" placeholder="ejemplo@correo.com" required />
 
-          <label for="asunto">Asunto</label>
-          <select id="asunto" required>
-            <option>Consulta</option>
-            <option>Sugerencia</option>
-            <option>Queja</option>
-            <option>Otro</option>
+          <label for="favorita">Elige tu reina favorita</label>
+          <select id="favorita" required>
+            <option value="sasha_colby">Sasha Colby</option>
+            <option value="jimbo">Jimbo</option>
+            <option value="fifi_estah">Fifi Estah</option>
+            <option value="leexa_fox">Leexa Fox</option>
+            <option value="otra">Otra</option>
           </select>
-          <label for="mensaje">Mensaje</label>
-          <textarea
-            id="mensaje"
-            rows="5"
-            placeholder="Escribe tu mensaje aquí..."
-            required
-          ></textarea>
-          <!-- Fieldset nos sirve para agrupar elementos de un formulario relacionado. -->
+
+          <label for="mensaje">¿Por qué es tu favorita?</label>
+          <textarea id="mensaje" rows="5" placeholder="Cuéntanos por qué te encanta..." required></textarea>
+
           <fieldset>
-            <!-- Legend nos ayuda a asignarle un título a nuestro grupo de fieldset. -->
             <legend>Género</legend>
-            <!-- Se les asigno el mismo name a la etiqueta input, esto para que solo deje seleccionar una de las opciones. -->
             <label for="género-femenino">Masculino</label>
             <input type="radio" name="género" id="género-femenino" />
-
             <label for="género-masculino">Femenino</label>
             <input type="radio" name="género" id="género-masculino" />
-
             <label for="género-otro">Otro</label>
             <input type="radio" name="género" id="género-otro" />
           </fieldset>
 
           <fieldset>
             <legend>Intereses</legend>
-            <label for="intereses-cocinar">Cocinar</label>
-            <input type="checkbox" name="Cocinar" id="intereses-cocinar" />
-
-            <label for="intereses-meditar">Meditar</label>
-            <input type="checkbox" name="Meditarr" id="intereses-meditar" />
-
-            <label for="intereses-senderismo">Senderismo</label>
-            <input
-              type="checkbox"
-              name="Senderismo"
-              id="intereses-senderismo"
-            />
-
-            <label for="intereses-escribir">Escribir</label>
-            <input type="checkbox" name="Escribir" id="intereses-escribir" />
+            <label for="intereses-drag">Drag</label>
+            <input type="checkbox" name="drag" id="intereses-drag" />
+            <label for="intereses-maquillaje">Maquillaje</label>
+            <input type="checkbox" name="maquillaje" id="intereses-maquillaje" />
+            <label for="intereses-performances">Performances</label>
+            <input type="checkbox" name="performances" id="intereses-performances" />
+            <label for="intereses-cultura">Cultura Drag</label>
+            <input type="checkbox" name="cultura" id="intereses-cultura" />
           </fieldset>
 
-          <button type="submit">
-            <span class="material-icons">send</span>Enviar
-          </button>
+          <button type="submit"><span class="material-icons">send</span>Enviar</button>
         </form>
       </section>
     </main>
